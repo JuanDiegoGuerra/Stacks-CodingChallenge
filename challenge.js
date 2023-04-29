@@ -15,7 +15,27 @@ class Stack {
 
   push(number) {
     // your code here
-    
+    let node = new Node(number)
+        
+    // check if the head node is valid
+    if(!this.head){
+      
+     //if not, make the new node the head and tail node of the stack
+      this.head = node
+      this.tail = node
+    }else{
+     // if there is at least one node in the stack
+     // make new node to be the head and the previous 
+     // head node to be the next property of the new head 
+       let temp = this.head
+       this.head = node
+       this.head.next = temp
+    }
+  
+   // increment the size
+   this.size++
+  
+  return this.size
   }
   
   pop() {
