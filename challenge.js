@@ -7,7 +7,11 @@ class Node {
 }
 
 class Stack {
-  
+  constructor(){
+    this.head = null
+    this.tail = null
+    this.size = 0
+}
 
   push(number) {
     // your code here
