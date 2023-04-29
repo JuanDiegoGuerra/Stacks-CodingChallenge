@@ -40,7 +40,23 @@ class Stack {
   
   pop() {
     // your code here
+        // if there is no node return null
+        if(!this.head) return null
+        // if there are nodes
+        let temp = this.head
+        // if only one node, set the head to null
+        if(this.head === this.tail){
+              this.tail = null
+        }
         
+        //set the head to be the next node
+        this.head = this.head.next
+       
+        //decrement the size
+        this.size--
+        
+        //return removed node value
+        return temp.value
   }
 }
 
